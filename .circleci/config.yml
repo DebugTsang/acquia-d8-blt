@@ -28,6 +28,9 @@ jobs:
 
       - run: php --ini
       - run: sudo apt-get -y update 
+      - run: sudo apt install -y libsqlite3-dev zlib1g-dev
+      - run: sudo docker-php-ext-install zip
+      - run: sudo composer self-update
       # \
       #       && sudo apt-get install -y libicu-dev \
       #       && sudo docker-php-ext-configure intl \
