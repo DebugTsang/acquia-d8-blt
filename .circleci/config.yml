@@ -26,11 +26,12 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: sudo apt-get -y update \
-            && sudo apt-get install -y libicu-dev \
-            && sudo docker-php-ext-configure intl \
-            && sudo docker-php-ext-install intl \ 
-            && composer install -n --prefer-dist
+      - run: sudo apt-get -y update 
+      # \
+      #       && sudo apt-get install -y libicu-dev \
+      #       && sudo docker-php-ext-configure intl \
+      #       && sudo docker-php-ext-install intl \ 
+      #       && composer install -n --prefer-dist
 
       - save_cache:
           paths:
